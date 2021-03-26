@@ -60,9 +60,22 @@ export class UserService {
 
   async createNewUser(payLoadUser) {
     const newUser = new this.userModel(payLoadUser);
-    return newUser
+    return newUser;
+  }
+
+  async addOrder(userId, orderId) {
+    let savedToUser = await this.userModel.update(
+      {
+        _id: userId,
+      },
+      {
+        $push: {
+          orders: orderId,
+        },
+      },
+    );
+    return savedToUser? { status:200, message: "OK"}: false
   }
 
   // Registration
-
 }

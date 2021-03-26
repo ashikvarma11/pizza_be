@@ -37,9 +37,9 @@ export class PizzaService {
     name: string,
     description: string,
     image_url: string,
+    size: string,
     category: string,
-    price: number,
-    total_orders: number,
+    price: number
   ) {
     const toBeUpdatedPizza = await this.getSinglePizza(id);
     if (!toBeUpdatedPizza) throw new NotFoundException('Pizza not found');
@@ -47,9 +47,9 @@ export class PizzaService {
     if(name) toBeUpdatedPizza.name = name
     if(description) toBeUpdatedPizza.description = description
     if(image_url) toBeUpdatedPizza.image_url = image_url
+    if(size) toBeUpdatedPizza.size = size
     if(category) toBeUpdatedPizza.category = category
     if(price) toBeUpdatedPizza.price = price
-    if(total_orders) toBeUpdatedPizza.total_orders = total_orders
 
     toBeUpdatedPizza.save();
     
@@ -59,17 +59,17 @@ export class PizzaService {
     name: string,
     description: string,
     image_url: string,
+    size: string,
     category: string,
     price: number,
-    total_orders: number,
   ) {
     const newPizza = new this.pizzaModel({
       name,
       description,
       image_url,
+      size,
       category,
       price,
-      total_orders,
     });
     let result;
     try {

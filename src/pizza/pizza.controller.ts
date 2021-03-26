@@ -31,17 +31,17 @@ export class PizzaController {
     @Body('name') name: string,
     @Body('description') description: string,
     @Body('image_url') image_url: string,
+    @Body('size') size: string,
     @Body('category') category: string,
     @Body('price') price: number,
-    @Body('total_orders') total_orders: number,
   ): Promise<any> {
     return this.pizzaService.insertPizza(
       name,
       description,
       image_url,
+      size,
       category,
-      price,
-      total_orders,
+      price
     );
   }
 
@@ -51,18 +51,18 @@ export class PizzaController {
     @Body('name') name: string,
     @Body('description') description: string,
     @Body('image_url') image_url: string,
+    @Body('size') size: string,
     @Body('category') category: string,
-    @Body('price') price: number,
-    @Body('total_orders') total_orders: number,
+    @Body('price') price: number
   ): Promise<any> {
     const updatedPizza = await this.pizzaService.updatePizza(
       id,
       name,
       description,
       image_url,
+      size,
       category,
-      price,
-      total_orders,
+      price
     );
 
     return updatedPizza;
