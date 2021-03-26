@@ -12,7 +12,7 @@ import {
 import { User } from './user.model';
 import { UserService } from './user.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService ) {}
   
@@ -57,6 +57,9 @@ export class UserController {
     return this.userService.deleteUser(id);
   }
 
-
+@Post(':userId/orders')
+addUser(@Param('userId') userId:string, @Body('orderId') orderId: string): Promise<any> {
+  return this.userService.addOrder(userId,orderId);
+}
 
 }
