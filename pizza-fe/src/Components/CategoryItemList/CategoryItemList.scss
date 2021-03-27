@@ -1,0 +1,161 @@
+  // Item List
+
+  .item-list {
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: var(--primary-bg);
+    .checkout-btn {
+      position: absolute;
+      right: 10%;
+      top: 5%;
+      width: 160px;
+      a {
+        font-weight: 700;
+        &:after {
+          content: "";
+          width: 30px;
+          position: absolute;
+          right: 20%;
+          height: 20px;
+          background: url(./arrow-right.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: bottom;
+        }
+        &:hover {
+          color: var(--dark-pink);
+          cursor: pointer;
+          &:after {
+            color: var(--dark-pink);
+          }
+        }
+      }
+    }
+    .menu-header {
+      margin-left: 15%;
+      margin-top: 150px;
+      position: absolute;
+      h4 {
+        font-weight: 700;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 4rem;
+          height: 4rem;
+          top: -60%;
+          left: -21%;
+          background: url(./dots.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    .container {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .block {
+        position: relative;
+        width: 580px;
+        height: 460px;
+        margin: 10px 300px 20px 80px;
+        h3 {
+          font-weight: 900;
+          color: transparent;
+          position: absolute;
+          font-family: "Open Sans";
+          -webkit-text-stroke-width: 5px;
+          -webkit-text-stroke-color: black;
+        }
+        &:nth-child(odd) {
+          h3 {
+            margin-left: 70%;
+          }
+        }
+        &:nth-child(even) {
+          h3 {
+            margin-top: -20%;
+          }
+        }
+        .user-selection {
+          position: absolute;
+          top: 110%;
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          .pizza-size {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid var(--black-color);
+            position: relative;
+            h6 {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-weight: 700;
+            }
+            &:hover {
+              color: var(--primary-bg);
+              background-color: var(--black-color);
+              border: none;
+              cursor: pointer;
+            }
+          }
+          .pizza-add-to-cart {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            height: 50px;
+            border: 3px solid black;
+            align-items: center;
+            span {
+              width: 100%;
+              font-size: 1rem;
+              font-weight: 700;
+              text-align: center;
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: black;
+                color:var(--primary-bg);
+            }
+          }
+        }
+      }
+      .block-1 {
+        background: url(./margharita.png) no-repeat 50% 50%;
+        background-size: cover;
+        bottom: 0;
+        right: -60px;
+      }
+
+      .block-2 {
+        background: url(./farmhouse.png) no-repeat 50% 50%;
+        background-size: cover;
+        right: -60px;
+      }
+
+      .block-3 {
+        background: url(./farmhouse.png) no-repeat 50% 50%;
+        background-size: cover;
+        bottom: 0;
+        right: -60px;
+      }
+
+      .block-4 {
+        background: url(./farmhouse.png) no-repeat 50% 50%;
+        background-size: cover;
+        right: -60px;
+      }
+
+      .block-5 {
+        background: url(./farmhouse.png) no-repeat 50% 50%;
+        background-size: cover;
+        bottom: 0;
+        right: -60px;
+      }
+    }
+  }
