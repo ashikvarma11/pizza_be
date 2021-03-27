@@ -1,0 +1,134 @@
+.hero-landing {
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: flex;
+    overflow-x: hidden;
+    .rev-block {
+        position: absolute;
+        right:15%;
+        top:10%;
+        width: 35%;
+        height: 80%;
+        z-index:1;
+        .hero-image {
+            opacity: 0;
+            background-image: url('./hero-image.png');
+            background-size: cover;
+            height:100%;
+            animation: appear-image 0.0001s linear forwards;
+            animation-delay: 2.4s;
+        }
+        &:after {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: var(--black-color);
+            animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation-delay: 2s;
+           }
+       }
+
+    .hero-first-half {
+        width:70%;
+        height: 100vh;
+        position: absolute;
+        left:0;
+        top:0;
+        .reveal-block {
+            position: absolute;
+            margin-left:15%;
+            width:50%;
+            margin-right:15%;
+            height:100vh;
+            z-index:1;
+            .hero-text {
+                opacity: 0;
+                background-image: url('./hero-text.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                height:100%;
+                z-index:1;
+                animation: appear-image 0.0001s linear forwards;
+                animation-delay: 2.4s;
+            }
+            &:after {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                background: var(--dark-pink);
+                animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+                animation-delay: 2s;
+               }
+        }
+    }
+    .hero-second-half {
+        background-color: transparent;
+        width:32%;
+        height: 100vh;
+        position: absolute;
+        right:0;
+        &:after {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background: var(--black-color);
+            animation: hero-second-half-rev-block 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            animation-delay: 1s;
+           }
+
+    }
+    
+}
+
+@keyframes rev-block {
+       
+    0% {
+         left: 0;
+         width: 0%;
+    }
+    50% {
+         left: 0;
+         width: 100%;
+    }
+    100% {
+         left: 100%;
+         width: 0%;
+    }
+
+}
+
+@keyframes hero-second-half-rev-block{
+       
+    0% {
+         left: 0;
+         width: 0%;
+         background-color: var(--dark-pink)
+    }
+    100% { 
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-pink)
+    }
+
+}
+
+
+@keyframes appear-image {
+
+0% {
+     opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+
+}

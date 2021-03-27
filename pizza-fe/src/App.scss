@@ -1,0 +1,47 @@
+
+html {font-size: 100%; /*16px*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #232323;
+      --primary-bg:#FFF8C5;
+      --dark-pink: #E41749;
+      --bg-shadow: #A3A566; //46% opacity
+      --black-color: #232323;
+      --light-yellow: #FFF3DC;
+      background-color: var(--primary-bg);
+  
+    * {
+        margin:0;
+        padding:0;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    
+    h1 {
+      font-size: 11.089rem;
+    }
+    
+    h2 {font-size: 6.854rem;}
+    
+    h3 {font-size: 4.236rem;}
+    
+    h4 {font-size: 2.618rem;}
+    
+    h5 {font-size: 1.618rem;}
+    
+    small, .text_small {font-size: 0.618rem;}
+    }
+  
+    
+  ::-webkit-scrollbar {
+      width: 0;
+    }
+
+  }

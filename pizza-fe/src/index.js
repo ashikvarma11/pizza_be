@@ -1,12 +1,13 @@
+import WrapperComponent from 'Router/Wrapper/WrapperComponent';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RouteComponent from 'Router/RouteComponent';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <RouteComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
