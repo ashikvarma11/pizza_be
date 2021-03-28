@@ -8,13 +8,13 @@ I chose Nest.js for backend as its a framework for Node.js, uses Typescript and 
 
 ## Technologies used
 
-Backend: Nest.js
-Database: MongoDB
-Frontend: React.js
+- Backend: Nest.js
+- Database: MongoDB
+- Frontend: React.js
 
 ### Animation Libraries I have used
-GSAP
-Anime.js
-Wow.js
-HorizontalScroll.js
-Animate.css
+- GSAP
+- Anime.js
+- Wow.js
+- HorizontalScroll.js
+- Animate.css
